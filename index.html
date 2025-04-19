@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precision Chrono Suite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Timer Card -->
+        <div class="card">
+            <h2>Timer</h2>
+            <div class="time-display" id="timerDisplay">00:00:00</div>
+            <div class="input-group">
+                <input type="number" id="hours" placeholder="HH" min="0">
+                <input type="number" id="minutes" placeholder="MM" min="0" max="59">
+                <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+            </div>
+            <div class="control-group">
+                <button onclick="startTimer()" class="btn-primary">Start</button>
+                <button onclick="pauseTimer()" class="btn-secondary">Pause</button>
+                <button onclick="resetTimer()" class="btn-danger">Reset</button>
+            </div>
+        </div>
+
+        <!-- Stopwatch Card -->
+        <div class="card">
+            <h2>Stopwatch</h2>
+            <div class="time-display" id="stopwatchDisplay">00:00:00.00</div>
+            <div class="control-group">
+                <button onclick="startStopwatch()" class="btn-primary">Start</button>
+                <button onclick="recordLap()" class="btn-secondary">Lap</button>
+                <button onclick="resetStopwatch()" class="btn-danger">Reset</button>
+            </div>
+            <div id="lapContainer"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
